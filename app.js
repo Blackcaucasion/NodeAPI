@@ -12,6 +12,7 @@ const orderRoutes = require('./api/routes/orders');
 mongoose.connect('mongodb+srv://luntuncwadi:'+ process.env.MONGO_ATLAS_PW+'@mynode-td34y.mongodb.net/test?retryWrites=true&w=majority',{
    useMongoClient :true
 })
+mongoose.Promise =global.Promise;
 
 // getting through CORS ERROR
 app.use((req,res,next)=>{ 
